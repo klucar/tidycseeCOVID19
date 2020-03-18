@@ -1,0 +1,14 @@
+Package: tidycseeCOVID19
+Type: Package
+Title: Tidy version of the JHU CSEE COVID-19 data
+Version: 0.1.0
+Author: Jim Klucar <klucar at gmail dot com>
+Maintainer: Jim Klucar <klucar@gmail.com>
+Description: This package reformats the COVID-19 daily report data
+    from JHU (https://github.com/CSSEGISandData/COVID-19). There are
+    various inconsistencies with the raw data, and this is an attempt
+    to reformat it into a tidy dataset for easier analysis.
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
