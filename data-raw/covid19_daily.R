@@ -206,7 +206,7 @@ tidy_data$Province[tidy_data$Province == 'Cruise Ship'] <- NA
 
 # TODO do this with bracket language
 
-filler <- tibble("Country" = c("Germany", "Israel", "Australia", "Ivory Coast"),
+filler <- tibble("Country" = c("Germany", "Israel", "Australia", "Cote d'Ivoire"),
                  "Latitude" = c(48.137154, 31.046051, -25.274399, -22.497511),
                  "Longitude" = c(11.576124, 34.851612, 133.775131, 17.015369))
 
