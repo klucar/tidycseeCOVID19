@@ -109,6 +109,7 @@ tidy_data$Country[ tidy_data$Country == "Viet Nam"] <- "Vietnam"
 tidy_data$Country[ tidy_data$Country == "Ivory Coast"] <- "Cote d'Ivoire"
 tidy_data$Country[ tidy_data$Country == "Taiwan"] <- "Taipei and environs"
 tidy_data$Country[ tidy_data$Country == "Mainland China"] <- "China"
+tidy_data$Country[ tidy_data$Country == "South Korea"] <- "Republic of Korea"
 
 tidy_data <- distinct(tidy_data)
 
