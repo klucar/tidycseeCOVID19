@@ -110,8 +110,13 @@ tidy_data$Country[ tidy_data$Country == "Ivory Coast"] <- "Cote d'Ivoire"
 tidy_data$Country[ tidy_data$Country == "Taiwan"] <- "Taipei and environs"
 tidy_data$Country[ tidy_data$Country == "Mainland China"] <- "China"
 tidy_data$Country[ tidy_data$Country == "South Korea"] <- "Republic of Korea"
+tidy_data$Country[ tidy_data$Country == "Hong Kong"] <- "Hong Kong SAR"
+tidy_data$Country[ tidy_data$Country == "Russia"] <- "Russian Federation"
+tidy_data$Country[ tidy_data$Country == "Ireland"] <- "Republic of Ireland"
+tidy_data$Country[ tidy_data$Country == "Czech Republic"] <- "Czechia"
+tidy_data$Country[ tidy_data$Country == "Macau"] <- "Macao SAR"
 
-tidy_data <- distinct(tidy_data)
+tidy_data <- distinct_all(tidy_data)
 
 # run this to look at country names to make sure no new variants have been added
 tidy_data %>% distinct(Country) %>% View
