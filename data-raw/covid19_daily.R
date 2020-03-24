@@ -258,6 +258,7 @@ tidy_data$Update <- tidy_data$dttm
 tidy_data <- tidy_data %>% select(-dttm)
 
 #################### Rename and Save #################
+tidy_data <- tidy_data %>% distinct_all
 
 covid19_daily <- tidy_data
 usethis::use_data(covid19_daily, overwrite = TRUE)
