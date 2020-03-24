@@ -54,7 +54,7 @@ for (file in csv_files){
 
 #################  END READ RAW CSV FILES ##################
 
-tidy_data <- distinct(tbl_raw)
+tidy_data <- distinct_all(tbl_raw)
 
 
 # Create columns for cruise ship data
@@ -178,7 +178,7 @@ tidy_data <- tidy_data %>% filter(!is.na(Latitude) & !is.na(Longitude)) %>%
   select(-Update, -Confirmed, -Deaths, -Recovered, -Ship, -City) %>%
   right_join(tidy_data %>% select(-Latitude, -Longitude),
              by = c("Province" = "Province", "Country" = "Country"))
-tidy_data <- distinct(tidy_data)
+tidy_data <- distinct_all(tidy_data)
 
 # Change the None provinces to NA
 tidy_data$Province[tidy_data$Province == "None"] <- NA
@@ -193,11 +193,11 @@ tidy_data$Province[tidy_data$Province == "United Kingdom"] <- NA
 
 #############################
 
-tidy_data <- tidy_data %>% filter(!is.na(Latitude) & !is.na(Longitude)) %>%
-  select(-Update, -Confirmed, -Deaths, -Recovered, -Ship, -City) %>%
-  right_join(tidy_data %>% select(-Latitude, -Longitude),
-             by = c("Province" = "Province", "Country" = "Country"))
-tidy_data <- distinct(tidy_data)
+#tidy_data <- tidy_data %>% filter(!is.na(Latitude) & !is.na(Longitude)) %>%
+#  select(-Update, -Confirmed, -Deaths, -Recovered, -Ship, -City) %>%
+#  right_join(tidy_data %>% select(-Latitude, -Longitude),
+#             by = c("Province" = "Province", "Country" = "Country"))
+#tidy_data <- distinct_all(tidy_data)
 
 
 # other cruise ships
@@ -222,7 +222,7 @@ tidy_data <- tidy_data %>% filter(is.na(Latitude)) %>% select(-Latitude, -Longit
   bind_rows(tidy_data %>% filter(!is.na(Latitude))) %>%
   bind_rows(tidy_data %>% filter(Country == "Others"))
 
-tidy_data <- distinct(tidy_data)
+tidy_data <- distinct_all(tidy_data)
 
 # Replace NA counts with 0
 tidy_data$Confirmed[is.na(tidy_data$Confirmed)] <- 0
