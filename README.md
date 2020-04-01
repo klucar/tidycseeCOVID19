@@ -1,5 +1,9 @@
 # tidycseeCOVID19
 
+# PLEASE NOTE: CHECK THE DATA BEFORE USING
+
+## I have noticed some inconsistencies in the data that are probably related to how I parse the original records. I have not had time to fix these issues.
+
 <!-- badges: start -->
 <!-- badges: end -->
 
